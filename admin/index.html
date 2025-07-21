@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <title>Content Manager</title>
-  <!-- Netlify Identity (for login) -->
+  <!-- Netlify Identity for login -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Netlify CMS will auto-mount onto the <body> -->
-
-  <!-- Load the full UMD build of Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms-app@^2.15.0/dist/netlify-cms.js"></script>
+  <!-- Netlify CMS will mount itself onto <body> -->
+  <!-- IMPORTANT: load the CMS UMD bundle, not the short name -->
+  <script src="https://unpkg.com/netlify-cms-app@2.15.0/dist/netlify-cms.js"></script>
 </body>
 </html>

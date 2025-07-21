@@ -6,6 +6,7 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+
   - name: "portfolio"
     label: "Portfolio"
     files:
