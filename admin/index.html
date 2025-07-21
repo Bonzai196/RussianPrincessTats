@@ -4,23 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <title>Content Manager</title>
-  <!-- Netlify Identity (needed for Git Gateway login) -->
+  <!-- Netlify Identity (must come before the CMS so it can hook into it): -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    // Redirect to /admin after login
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-      window.netlifyIdentity.init();
-    }
-  </script>
 </head>
 <body>
-  <!-- THIS is where Netlify CMS will render -->
-  <div id="nc-root"></div>
+  <!-- no extra div needed: netlify-cms will mount itself onto <body> -->
 
-  <!-- Netlify CMS app -->
-  <script src="https://unpkg.com/netlify-cms-app@^2.15.72/dist/netlify-cms-app.js"></script>
+  <!-- Load the official UMD build of Netlify CMS (includes React, ReactDOM, etc.) -->
+  <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
 </body>
 </html>
