@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a tattoo consultation or session with Ekaterina – gothic blackwork, fine line, occult and ornamental designs." />
+  <title>Book a Session – Ekaterina Ink</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+</head>
+<body class="booking-page">
+  <header class="site-header minimal">
+    <div class="brand small">
+      <a href="index.html" class="home-link"><img src="assets/logo.svg" alt="Logo" class="logo" /></a>
+      <h1 class="site-title">Book A Session</h1>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#portfolio">Work</a></li>
+        <li><a class="book-link active" href="booking.html">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="booking-main" aria-labelledby="bookTitle">
+    <section class="booking-intro">
+      <h2 id="bookTitle">Request Form</h2>
+      <p>Provide detailed info so I can evaluate and reply efficiently. You’ll get a confirmation email if the form submits correctly.</p>
+      <p class="note">* Required fields</p>
+    </section>
+
+    <form id="bookingForm" class="booking-form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
+      <!-- Replace the action with backend endpoint or remove for mailto fallback -->
+      <fieldset>
+        <legend>Contact Info</legend>
+        <label>Name*<input type="text" name="name" required /></label>
+        <label>Email*<input type="email" name="email" required /></label>
+        <label>Instagram<input type="text" name="instagram" placeholder="@handle" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tattoo Details</legend>
+        <label>Placement*<input type="text" name="placement" required placeholder="e.g. left forearm inner" /></label>
+        <label>Approx. Size (inches or cm)*<input type="text" name="size" required placeholder="e.g. 4x6 in" /></label>
+        <label>Style*<select name="style" required>
+          <option value="">Select style</option>
+          <option>Blackwork</option>
+          <option>Fine Line</option>
+            <option>Occult / Symbolic</option>
+          <option>Ornamental</option>
+          <option>Portrait</option>
+          <option>Flash (from sheet)</option>
+          <option>Other</option>
+        </select></label>
+        <label>Color or Black & Grey*<select name="palette" required>
+          <option value="">Select</option>
+          <option>Pure Blackwork</option>
+          <option>Black & Grey</option>
+          <option>Limited Color Accents</option>
+        </select></label>
+        <label>Budget Range (optional)<input type="text" name="budget" placeholder="$300–$500" /></label>
+        <label>Preferred Days<input type="text" name="preferred_days" placeholder="e.g. Tue/Thu evenings" /></label>
+        <label>Reference Links<textarea name="refs" placeholder="Paste URLs, Instagram posts, etc."></textarea></label>
+        <label>Concept Description*<textarea name="concept" required placeholder="Describe the idea, symbolism, mood, must‑have elements..."></textarea></label>
+        <label>Medical / Skin Notes<textarea name="notes" placeholder="Allergies, sensitivities, healing concerns..."></textarea></label>
+        <label>File Upload (optional images)<input type="file" name="attachments" multiple /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Consent</legend>
+        <label class="checkbox"><input type="checkbox" name="age_confirm" required /> I confirm I am 18+.</label>
+        <label class="checkbox"><input type="checkbox" name="originality" required /> I understand customs are unique; I won't ask for direct copies.</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="cta">Submit Request</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <section class="booking-faq" aria-labelledby="faqTitle">
+      <h2 id="faqTitle">FAQ</h2>
+      <details>
+        <summary>How long until I hear back?</summary>
+        <p>Usually within 3–5 business days. Complex concepts may need longer.</p>
+      </details>
+      <details>
+        <summary>Do you require deposits?</summary>
+        <p>Yes. Approved bookings receive a secure deposit link. Deposits are non‑refundable and applied to final cost.</p>
+      </details>
+      <details>
+        <summary>Do you release flash?</summary>
+        <p>Yes—flash drops are posted on Instagram stories. Indicate flash interest and list the sheet code if applicable.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer minimal-foot">
+    <p>© <span id="year"></span> Ekaterina Ink</p>
+    <p><a href="index.html">← Back to Portfolio</a></p>
+  </footer>
+
+  <script src="booking.js" defer></script>
+</body>
+</html>

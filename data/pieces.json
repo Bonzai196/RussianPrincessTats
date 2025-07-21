@@ -1,0 +1,33 @@
+[
+  {
+    "src": "assets/placeholder.jpg",
+    "style": "blackwork",
+    "caption": "Ritual dagger with ornamental frame",
+    "alt": "Blackwork dagger tattoo"
+  },
+  {
+    "src": "assets/placeholder.jpg",
+    "style": "occult",
+    "caption": "Occult sigil surrounded by lunar phases"
+  },
+  {
+    "src": "assets/placeholder.jpg",
+    "style": "ornamental",
+    "caption": "Filigree chest panel design"
+  },
+  {
+    "src": "assets/placeholder.jpg",
+    "style": "fine-line",
+    "caption": "Fine line botanical spine"
+  },
+  {
+    "src": "assets/placeholder.jpg",
+    "style": "flash",
+    "caption": "Flash raven with runes"
+  },
+  {
+    "src": "assets/placeholder.jpg",
+    "style": "blackwork",
+    "caption": "Stippled gothic arch window"
+  }
+]
