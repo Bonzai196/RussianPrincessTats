@@ -129,3 +129,28 @@ a:hover, a:focus { color: var(--accent-glow); }
 ::-webkit-scrollbar-track { background:#0d0d11; }
 ::-webkit-scrollbar-thumb { background:#22222a; border:2px solid #0d0d11; }
 ::-webkit-scrollbar-thumb:hover { background:#34343c; }
+
+.events .event {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+.events .event img {
+  width: 160px;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.events .event-info h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+.events .event-info time {
+  display: block;
+  color: var(--accent);
+  margin: 0.3rem 0;
+}
+.events .event-info p {
+  margin: 0.4rem 0;
+}

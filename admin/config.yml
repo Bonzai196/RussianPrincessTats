@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio"
+    files:
+      - file: "data/portfolio.json"
+        label: "Portfolio Items"
+        name: "portfolio"
+        fields:
+          - {label: "Items", name: "items", widget: "list", fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Style", name: "style", widget: "select", options: ["blackwork","fine-line","occult","ornamental","flash"]}
+          }
+  - name: "categories"
+    label: "Categories"
+    files:
+      - file: "data/categories.json"
+        label: "Tattoo Categories"
+        name: "categories"
+        fields:
+          - {label: "Categories", name: "categories", widget: "list", fields:
+              - {label: "Name", name: "name", widget: "string"}
+          }
+  - name: "events"
+    label: "Events"
+    files:
+      - file: "data/events.json"
+        label: "Events List"
+        name: "events"
+        fields:
+          - {label: "Events", name: "events", widget: "list", fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+          }

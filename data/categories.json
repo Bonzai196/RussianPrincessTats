@@ -1,0 +1,10 @@
+{
+  "categories": [
+    { "name": "all" },
+    { "name": "blackwork" },
+    { "name": "fine-line" },
+    { "name": "occult" },
+    { "name": "ornamental" },
+    { "name": "flash" }
+  ]
+}

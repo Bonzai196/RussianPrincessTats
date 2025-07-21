@@ -53,4 +53,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }));
   }
+  function renderEvents() {
+  fetch('data/events.json')
+    .then(r => r.json())
+    .then(data => {
+      const container = document.getElementById('events-list');
+      data.events.sort((a, b) => new Date(a.date) - new Date(b.date));
+      data.events.forEach(evt => {
+        const art = document.createElement('article');
+        art.className = 'event';
+        art.innerHTML = `
+          <img src="${evt.image || 'assets/placeholder.jpg'}" alt="${evt.title}" loading="lazy">
+          <div class="event-info">
+            <h3>${evt.title}</h3>
+            <time datetime="${evt.date}">${new Date(evt.date).toLocaleDateString()}</time>
+            <p>${evt.description}</p>
+          </div>
+        `;
+        container.appendChild(art);
+      });
+    });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  initGallery();
+  initFilters();
+  if (document.getElementById('events-list')) renderEvents();
+});
 });
