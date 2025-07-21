@@ -1,16 +1,14 @@
-<!-- admin/index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <title>Content Manager</title>
-  <!-- Netlify Identity (must come before the CMS so it can hook into it): -->
+  <!-- Netlify Identity (for the login) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- no extra div needed: netlify-cms will mount itself onto <body> -->
-
-  <!-- Load the official UMD build of Netlify CMS (includes React, ReactDOM, etc.) -->
-  <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
+  <!-- Netlify CMS will auto-mount into <body> -->
+  <!-- Load the full UMD Netlify CMS bundle from unpkg: -->
+  <script src="https://unpkg.com/netlify-cms@^2.15.0/dist/netlify-cms.js"></script>
 </body>
 </html>
